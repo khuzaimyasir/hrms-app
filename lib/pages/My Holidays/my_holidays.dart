@@ -12,6 +12,7 @@ import 'package:hrms_app/models_providers/theme_provider.dart';
 import 'package:provider/provider.dart';
 import  'package:intl/intl.dart';
 
+// ignore: must_be_immutable
 class MyHolidays3 extends StatefulWidget {
   String? apiKey;
 
@@ -37,9 +38,10 @@ class _MyHolidaysState extends State<MyHolidays3> {
         backgroundColor: white,
         appBar: AppBar(
           primary: true,
-          title: customToolBar(size, backButtonImagePath, "My Holidays",
-              isLightTheme ? true : false),
-          automaticallyImplyLeading: false,
+          title: (Text("My Holidays")),
+          // title: customToolBar(size, backButtonImagePath, "My Holidays",
+          //     isLightTheme ? true : false),
+          // automaticallyImplyLeading: false,
           backgroundColor:
               isLightTheme ? l_toolbar_bg_color : d_toolbar_bg_color,
           shadowColor: Colors.transparent,

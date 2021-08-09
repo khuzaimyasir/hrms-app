@@ -11,6 +11,7 @@ import 'package:hrms_app/pages/My%20Leaves/leave_quota.dart';
 import 'package:hrms_app/pages/My%20Leaves/leaves_history.dart';
 import 'package:provider/provider.dart';
 
+// ignore: must_be_immutable
 class MyLeaves extends StatefulWidget {
   final String? apiKey;
   List<LeaveQuotaChildModel>? leaveQuotaChildList;

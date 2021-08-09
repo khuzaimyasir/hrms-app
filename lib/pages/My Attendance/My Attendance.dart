@@ -1,3 +1,5 @@
+
+
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +48,7 @@ class MyAttendanceState extends State<MyAttendance>
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
     bool isLightTheme=themeProvider.isLightTheme;
 
     return new Scaffold(
@@ -54,8 +56,9 @@ class MyAttendanceState extends State<MyAttendance>
       appBar:  AppBar(
 
         primary: true,
-        title: customToolBar(size, backButtonImagePath, "My Attendance", isLightTheme ? true:false),
-        automaticallyImplyLeading: false,
+        title:Text("My Attendance"),
+        // title: customToolBar(size, backButtonImagePath, "My Attendance", isLightTheme ? true:false),
+        // automaticallyImplyLeading: false,
         bottom: TabBar(
           isScrollable: true,
           unselectedLabelColor:isLightTheme?black:grey,

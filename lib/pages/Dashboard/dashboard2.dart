@@ -699,6 +699,7 @@ class _MenuDashboardPageState extends State<MenuDashboardPage2>
   }
 }
 
+// ignore: must_be_immutable
 class ExpandableClass extends StatefulWidget {
   final String? title;
 

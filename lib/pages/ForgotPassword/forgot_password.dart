@@ -28,6 +28,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   late bool isValidEmail;
 
   @override
+  // ignore: must_call_super
   void initState() {
     _isEmailTextFieldVisible = false;
 
@@ -46,17 +47,18 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     return Scaffold(
         backgroundColor: isLightTheme ? lightModeBackgroundColor:darkModeBackgroundColor ,
         appBar: AppBar(
-          primary: true,
-          title: customToolBar(size, backButtonImagePath, "Forgot Password",
-              isLightTheme ? true : false),
-          automaticallyImplyLeading: false,
+          title: Text(("forgot password")),
+          // primary: true,
+          // title: customToolBar(size, backButtonImagePath, "Forgot Password",
+          //     isLightTheme ? true : false),
+          // automaticallyImplyLeading: false,
           // backgroundColor: l_toolbar_bg_color,
-          backgroundColor:
-              isLightTheme ? l_toolbar_bg_color : d_toolbar_bg_color,
-          // status bar color
-          // brightness: Brightness.light,
-          shadowColor: Colors.transparent,
-          titleSpacing: 0.9,
+          // backgroundColor:
+          //     isLightTheme ? l_toolbar_bg_color : d_toolbar_bg_color,
+          // // status bar color
+          // // brightness: Brightness.light,
+          // shadowColor: Colors.transparent,
+          // titleSpacing: 0.9,
         ),
         body: GestureDetector(
           onTap: (){

@@ -30,6 +30,7 @@ class RestApi {
 
   Future<LoginResponseModel?> loginApiCall(String user, String password) async {
     final String apiUrl = baseUrl + loginUrl;
+    // ignore: unused_local_variable
     var url=Uri.parse(apiUrl);
     // Map<String,String> headers = {'Content-Type':'application/json','authorization':'Basic c3R1ZHlkb3RlOnN0dWR5ZG90ZTEyMw=='};
 
@@ -136,6 +137,7 @@ class RestApi {
 
     if (response.statusCode == 200) {
       print('url hit successful' + response.body);
+      // ignore: unused_local_variable
       String data = response.body;
       // print(' prod name - '+ jsonDecode(data)['Information'][0]['name']);
       return MyHolidaysResponseModel.fromJson(json.decode(response.body));
@@ -161,6 +163,7 @@ class RestApi {
 
     if (response.statusCode == 200) {
       print('url hit successful' + response.body);
+      // ignore: unused_local_variable
       String data = response.body;
 
       return TodayCheckInModel.fromJson(json.decode(response.body));
@@ -187,6 +190,7 @@ class RestApi {
 
     if (response.statusCode == 200) {
       print('url hit successful' + response.body);
+      // ignore: unused_local_variable
       String data = response.body;
 
       return LeaveQuotaResponseModel.fromJson(json.decode(response.body));

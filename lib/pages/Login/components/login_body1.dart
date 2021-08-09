@@ -41,14 +41,13 @@ class _LoginBody1State extends State<LoginBody1> {
     _isEmailTextFieldVisible = false;
     _isPasswordTextFieldVisible = false;
 
-
     _email = "";
     _password = "";
 
     // _emailSaved = "";
     // _passwordSaved = "";
 
-    getSecureData();
+    // getSecureData();
     // print("After email :"+_emailSaved);
 
     super.initState();
@@ -65,7 +64,7 @@ class _LoginBody1State extends State<LoginBody1> {
         height: size.height,
         width: size.width,
         child: Stack(
-          clipBehavior: Clip.none, 
+          clipBehavior: Clip.none,
           // // overflow: Overflow.visible, now changed to clipbehaviour
           fit: StackFit.passthrough,
           children: [
@@ -233,6 +232,7 @@ class _LoginBody1State extends State<LoginBody1> {
                         text: "LOGIN",
                         color: themeProvider.isLightTheme ? green : orange,
                         press: () async {
+                          // ignore: unused_local_variable
                           RestApi a = new RestApi();
 
                           //this check is for email
@@ -379,25 +379,27 @@ class _LoginBody1State extends State<LoginBody1> {
     await storage.write(key: apiKeyString, value: apiKey);
   }
 
-  void getSecureData() async {
-    FlutterSecureStorage storage = new FlutterSecureStorage();
-    // ignore: unnecessary_null_comparison
-    if (storage == null) {
-    } else {
-      String email = (await storage.read(key: emailString))!;
-      String password = (await storage.read(key: passwordString))!;
+//   void getSecureData() async {
+//     FlutterSecureStorage storage = new FlutterSecureStorage();
+//     // ignore: unnecessary_null_comparison
+//     if (storage == null) {
+//     } else {
+//       String email = (await storage.read(key: emailString))!;
+//       String password = (await storage.read(key: passwordString))!;
 
-      if (email != null && password != null) {
-        print("Email in DB :" + email);
-        print("Password in DB :" + password);
+//       // ignore: unnecessary_null_comparison
+//       if (email != null && password != null) {
+//         print("Email in DB :" + email);
+//         print("Password in DB :" + password);
 
-        setState(() {
-          _email = email;
-          _password = password;
-        });
+//         setState(() {
+//           _email = email;
+//           _password = password;
+//         });
 
-        loadData(email, email);
-      }
-    }
-  }
+//         loadData(email, email);
+//       }
+//     }
+//   }
+// }
 }

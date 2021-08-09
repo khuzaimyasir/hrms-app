@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hrms_app/Components/custom_icons.dart';
@@ -189,6 +191,7 @@ Widget customToolBar(Size size,String image,String title,bool isLightTheme) {
                   child: Image.asset(image),
                 ),
                 onTap: () {
+                    // Navigator.pop(context);
                   //return back to the previous activity
                 },
               ),

@@ -4,6 +4,7 @@ import 'package:hrms_app/Constants/constants.dart';
 import 'package:hrms_app/models_providers/theme_provider.dart';
 import 'package:provider/provider.dart';
 
+// ignore: must_be_immutable
 class TodayAttendance extends StatelessWidget {
    String? checkIn, checkOut;
 

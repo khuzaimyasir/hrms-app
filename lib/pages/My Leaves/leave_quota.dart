@@ -6,6 +6,7 @@ import 'package:hrms_app/model/dashboard/leave_quota/leave_quota_response_model.
 import 'package:hrms_app/models_providers/theme_provider.dart';
 import 'package:provider/provider.dart';
 
+// ignore: must_be_immutable
 class LeaveQuotaClass extends StatelessWidget {
   final bool? isLightTheme;
   List<LeaveQuotaChildModel>? leaveChildList;

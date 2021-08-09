@@ -12,6 +12,7 @@ import 'package:hrms_app/utils/strings.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
+// ignore: must_be_immutable
 class AttendanceHistory2 extends StatefulWidget {
   String? apiKey;
 
