@@ -207,7 +207,7 @@ Widget customToolBar(Size size,String image,String title,bool isLightTheme) {
               child: Text(title,
                   style: TextStyle(
                       fontSize: toolbarFontSize(size),
-                      color: white)),
+                      color: grey)),
             ),
           ),
         ),
